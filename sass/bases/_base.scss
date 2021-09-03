@@ -1,0 +1,50 @@
+:root {
+  --color-primary: #c69963;
+  --color-primary-dark: #5a4b38;
+  --color-secondary: #0d305a;
+  --color-secondary-dark: #101d2c;
+  --color-secondary-light: #123b7b;
+  --color-mainGrey: #e5e5e5;
+  --color-white: #fff;
+  --color-black: #000;
+}
+
+.wrapper {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+.page {
+  height: 100vh;
+  scroll-snap-align: start;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  border: none;
+  list-style: none;
+  text-decoration: none;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 62.5%; // 1rem = 10px
+}
+
+.container {
+  width: 80vw;
+  margin: auto;
+}

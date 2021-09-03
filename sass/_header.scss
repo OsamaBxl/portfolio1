@@ -1,0 +1,114 @@
+.header-section {
+  background-image: linear-gradient(
+    to right bottom,
+    var(--color-secondary-dark),
+    var(--color-secondary-light)
+  );
+}
+
+.header {
+  min-height: calc(100vh - 7rem);
+  position: relative;
+  overflow: hidden;
+
+  &__text {
+    width: 70%;
+    font-family: "Stardos Stencil";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-60%);
+
+    .primary {
+      color: var(--color-primary);
+    }
+
+    h1 {
+      color: var(--color-mainGrey);
+      font-size: 3rem;
+      font-style: italic;
+      letter-spacing: 3px;
+      line-height: 4rem;
+      text-shadow: 8px 6px 5px #000000;
+      text-align: center;
+    }
+
+    p {
+      font-size: 1.6rem;
+      margin-top: 2rem;
+      color: var(--color-white);
+      margin-left: 2rem;
+      text-align: center;
+      text-shadow: 6px 5px 3px #000000;
+    }
+  }
+}
+
+.nav {
+  height: 7rem;
+  z-index: 5;
+
+  &__top {
+    padding-top: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__logo {
+    z-index: 20;
+  }
+
+  &__toggle-btn {
+    position: relative;
+    width: 4rem;
+    height: 1.2rem;
+    cursor: pointer;
+    z-index: 20;
+
+    .one,
+    .two {
+      position: absolute;
+      width: 2.5rem;
+      height: 0.2rem;
+      background-color: var(--color-white);
+    }
+
+    .two {
+      margin-top: 1rem;
+    }
+  }
+
+  &__menu {
+    position: absolute;
+    left: 0;
+    background-color: rgba(#111, 0.9);
+    height: 100vh;
+    width: 100%;
+    z-index: 10;
+    // top: -100% !important;
+
+    .data {
+      margin: auto;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-60%);
+      left: 10%;
+
+      li {
+        padding: 0.6rem;
+
+        a {
+          color: var(--color-white);
+          font-size: 1.6rem;
+          text-transform: uppercase;
+          transition: all 0.7s;
+        }
+        a:hover {
+          color: var(--color-primary);
+          margin-left: 0.7rem;
+        }
+      }
+    }
+  }
+}
+
+@include textAnimate();
